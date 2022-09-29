@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
+import { InterfaceDataUser } from "./DemoProps";
 
-export default function UserInfor() {
+interface InterfaceUserInfor {
+  user: InterfaceDataUser;
+}
+export default function UserInfor({ user }: InterfaceUserInfor) {
   return (
-    <div>UserInfor</div>
-  )
+    <div>
+      <p>{user.name}</p>
+      <p>{user.age}</p>
+    </div>
+  );
 }
